@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    console.log(this);
+    $('.game-state').hide();
 
     var gemValue = [];
     var win = 0;
@@ -9,6 +9,7 @@ $(document).ready(function () {
     var activeGem = ['#ruby', '#sapphire', '#emerald', '#diamond'];
     var gemID;
     var totalScore;
+
     gameReset();
     //define a function to describe the game's resting state//
     function gameReset() {
@@ -42,10 +43,14 @@ $(document).ready(function () {
 
         if (totalScore === startingNumber) {
             win ++;
+            $('.game-state').addClass('bg-success text-white');
+            $('.game-state').show();
             $('#game-state').text('Congratulations! You Win!');
             gameReset();
         } else if (totalScore > startingNumber) {
             losses ++;
+            $('.game-state').addClass('bg-danger text-white');
+            $('.game-state').show();
             $('#game-state').text('Too bad! Better luck next time!');
             gameReset();
             }
@@ -53,6 +58,8 @@ $(document).ready(function () {
 
     //define a function for when each image is clicked, the game updates and the totalScore is updated//
     $('.card-img').on('click', function gameUpdate() {
+        $('.game-state').hide();
+        $('.game-state').removeClass('bg-danger bg-success text-white');
         $('#game-state').text('');
         var currentScore = parseInt($('#total-score').text());
         var currentValue = parseInt($(this).attr('data-value'));

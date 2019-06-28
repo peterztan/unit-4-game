@@ -3,7 +3,7 @@ body {
     background-size: cover;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
 }
 
@@ -19,12 +19,12 @@ img {
 
 img:hover {
     opacity: 1;
-    width: 15em;
-    height: 15em;
-    transform: translateX(0.5em);
+    width: 13em;
+    height: 13em;
+    transform: translateX(-2.5em);
 }
 
 img:active {
-    transform: translateY(0.5em);
+    transform: translateY(1em);
 }
 
