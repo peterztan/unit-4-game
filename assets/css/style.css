@@ -3,23 +3,28 @@ body {
     background-size: cover;
 }
 
+h1 {
+    text-align: center;
+}
+
 /* the transition animations are not working as intended, maybe in confllict with bootstrap*/
 
-button {
-    width: 100%;
-    height: 100%;
-    -webkit-transition: width 2s, height 2s, opacity 2s;
-    transition: width 2s, height 2s, opacity 2s;
+img {
+    width: 12.5em;
+    height: 12.5em;
+    -webkit-transition: width 1s, height 1s, transform 1s, opacity 1s;
+    transition: width 1s, height 1s, transform 1s, opacity 1s;
     opacity: 0.4;
 }
 
-button:hover {
+img:hover {
     opacity: 1;
-    width: 105%;
-    height: 105%;
+    width: 15em;
+    height: 15em;
+    transform: translateX(0.5em);
 }
 
-button:active {
+img:active {
     transform: translateY(0.5em);
 }
 
