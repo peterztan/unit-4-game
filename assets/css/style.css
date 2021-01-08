@@ -10,21 +10,31 @@ h1, h2 {
 /* the transition animations are not working as intended, maybe in confllict with bootstrap*/
 
 img {
-    width: 12.5em;
-    height: 12.5em;
-    -webkit-transition: width 1s, height 1s, transform 1s, opacity 1s;
-    transition: width 1s, height 1s, transform 1s, opacity 1s;
+    -webkit-transition: width 0.25s, height 0.25s, transform 0.25s, opacity 0.25s;
+    transition: width 0.25s, height 0.25s, transform 0.25s, opacity 0.25s;
     opacity: 0.4;
 }
 
 img:hover {
     opacity: 1;
-    width: 13em;
-    height: 13em;
-    transform: translateX(-2.5em);
+    transform: translateY(-1em);
 }
 
 img:active {
-    transform: translateY(1em);
+    transform: translateY(0.25em);
+}
+
+.card {
+    backdrop-filter: blur(18px);
+    background-color: rgba(232, 232, 232, 0.5);
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.row > * {
+    flex-direction: row;
 }
 

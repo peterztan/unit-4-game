@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,98 +9,94 @@
     <title>Crystals Collectors!</title>
 
     <!--Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
+
 <body>
-    <div class="jumbotron-transparent">
-        <div class="container">
-            <div class="container-fluid">
-                <div class="card-transparent">
-                    <div class="card-body shadow-lg p-3 mb-5 bg-light rounded">
-                        <div class="row align-items-center">
-                            <div class="col-md-12">
-                                <div class="card-text shadow-lg p-3 mb-5 bg-dark text-danger rounded">
-                                    <h1>Crystals Collector!</h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card-text shadow-lg p-3 mb-5 bg-primary text-white rounded">
-                                    <p>
-                                    You will be given a random number at the start of the game.
-                                    </P>
-                                    <p>
-                                    There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
-                                    </p>
-                                    <p>
-                                    You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.
-                                    </p>
-                                    <p>
-                                    The value of each crystal is hidden from you until you click on it.
-                                    </p>
-                                    <p>
-                                    Each time when the game starts, the game will change the values of each crystals!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div class="card-text shadow-lg p-3 mb-5 bg-info text-white rounded">
-                                    <h5>Your Goal is:</h5>
-                                    <div id="display"></div>
-                                </div>
-                                <div class="card-text shadow-lg p-3 mb-5 bg-warning text-white rounded">
-                                    <h5>Your total score is:</h5>
-                                    <div id="total-score"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="card-text shadow-lg p-3 mb-5 bg-success text-white rounded">
-                                    <h5>Wins: </h3>
-                                    <div id="wins"></div>
-                                </div>
-                                <div class="card-text shadow-lg p-3 mb-5 bg-danger text-white rounded">
-                                    <h5>Losses: </h3>
-                                    <div id="losses"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="card-text game-state shadow-lg p-3 mb-5 text-white rounded">
-                                    <h2 id="game-state"></h2>
-                                </div>
-                            </div>
-                        </div
-                        ><div class="row">
-                            <div class="col-md-3">
-                                <img class="card-img" id="ruby" src="./assets/images/ruby.jpg" alt="ruby">
-                            </div>
-                            <div class="col-md-3">
-                                <img class="card-img" id="sapphire" src="./assets/images/sapphire.jpg" alt="sapphire">
-                            </div>
-                            <div class="col-md-3">
-                                <img class="card-img" id="emerald" src="./assets/images/emerald.jpg" alt="emerald">
-                            </div>
-                            <div class="col-md-3">
-                                <img class="card-img" id="diamond" src="./assets/images/diamond.jpg" alt="diamond">
-                            </div>
-                        </div>
-                        
-                    </div>
+    <div class="card m-5 p-5">
+        <div class="row align-items-center">
+            <div class="card-text shadow-lg p-3 mb-5 bg-dark text-danger rounded">
+                <h1>Crystals Collector!</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card-text shadow-lg p-3 mb-5 bg-primary text-white rounded">
+                <p>
+                    You will be given a random number at the start of the game.
+                </P>
+                <p>
+                    There are four crystals below. By clicking on a crystal you will add a specific amount of points
+                    to your total score.
+                </p>
+                <p>
+                    You win the game by matching your total score to random number, you lose the game if your total
+                    score goes above the random number.
+                </p>
+                <p>
+                    The value of each crystal is hidden from you until you click on it.
+                </p>
+                <p>
+                    Each time when the game starts, the game will change the values of each crystals!
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="card-text shadow-lg p-3 mb-5 bg-info text-white rounded">
+                    <h5>Your Goal is:</h5>
+                    <div id="display"></div>
                 </div>
+                <div class="card-text shadow-lg p-3 mb-5 bg-warning text-white rounded">
+                    <h5>Your total score is:</h5>
+                    <div id="total-score"></div>
+                </div>
+            </div>
+            <div class="col-md-3">  
+                <div class="card-text shadow-lg p-3 mb-5 bg-success text-white rounded">
+                    <h5>Wins: </h3>
+                        <div id="wins"></div>
+                </div>
+                <div class="card-text shadow-lg p-3 mb-5 bg-danger text-white rounded">
+                    <h5>Losses: </h3>
+                        <div id="losses"></div>
+                </div>
+            </div>  
+        </div>
+        <div class="row">
+            <div class="card-text game-state shadow-lg p-3 mb-5 text-white rounded">
+                <h2 id="game-state"></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <img class="card-img" id="ruby" src="./assets/images/ruby.jpg" alt="ruby">
+            </div>
+            <div class="col-md-3">
+                <img class="card-img" id="sapphire" src="./assets/images/sapphire.jpg" alt="sapphire">
+            </div>
+            <div class="col-md-3">
+                <img class="card-img" id="emerald" src="./assets/images/emerald.jpg" alt="emerald">
+            </div>
+            <div class="col-md-3">
+                <img class="card-img" id="diamond" src="./assets/images/diamond.jpg" alt="diamond">
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <script src="./assets/javascript/javascript.js"></script>
 
 </body>
+
 </html>
